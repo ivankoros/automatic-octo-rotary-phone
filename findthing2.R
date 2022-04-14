@@ -11,13 +11,14 @@ findthing2 <- function(name, datasets) {
       print(paste0(mdfeime$Symbol[as.integer(row.names(set))],
                    " is ",
                    mdfeime$SaR[as.integer(row.names(set))] ,
+                   " (",round(mdfeime$Log2f[as.integer(row.names(set))], digits = 3),")",
                    " in ",
                    x))
     }
   }
 }
 
-findthing2(name = "Bmp",
+findthing2(name = "Gbp",
            datasets = list("DP IR vs DP Sham Filtered.xlsx",
                            "CD IR vs CD Sham Filtered.xlsx",
                            "DP Sham vs CD Sham Filtered.xlsx"))
